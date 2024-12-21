@@ -1,0 +1,123 @@
+* {
+    border: none;
+    border-radius: 0;
+    /*font-family: "Hack", "Noto Color Emoji", sans-serif;*/
+    font-size: 18px;
+    /*font-weight: bold;*/
+    min-height: 0;
+    font-family: "JetBrains Mono Nerd Font"
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.4);
+    border: 3px solid #DF9C52;
+    color: #e5e9f0;
+    border-radius: 20px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button {
+    padding: 5px 9px;
+    background: #935940; 
+    color: #ffffff;
+    margin: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 4px;
+    border-radius: 10px;
+}
+
+#workspaces button.focused {
+    background: #4c566a;
+}
+
+#workspaces button.urgent {
+    background-color: #bf616a;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock, #battery, #cpu, #memory, #temperature, #backlight, #network, #pulseaudio, #tray, #mode, #idle_inhibitor {
+    padding: 0 10px;
+}
+
+#clock {
+    /*background-color: #64727D;*/
+    color: #e5e9f0;
+    font-weight: bold;
+}
+
+#battery {
+    /*background-color: #000000;*/
+    color: #e5e9f0;
+}
+
+#battery.charging {
+    /*background-color: #000000;*/
+    color: #e5e9f0;
+}
+
+@keyframes blink {
+    to {
+        /*background-color: #ffffff;*/
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#cpu {
+    /*background: #2ecc71;*/
+    color: #e5e9f0;
+}
+
+#memory {
+    /*background: #9b59b6;*/
+    color: #e5e9f0;
+}
+
+#backlight {
+    /*background: #90b1b1;*/
+    color: #e5e9f0;
+}
+
+#network {
+    /*background: #2980b9;*/
+    color: #e5e9f0;
+}
+
+#network.disconnected {
+    /*background: #f53c3c;*/
+    color: #e5e9f0;
+}
+
+#pulseaudio {
+    /*background: #000000;*/
+    color: #e5e9f0;
+}
+
+#pulseaudio.muted {
+    /*background: #000000;*/
+    color: #e5e9f0;
+}
+
+#custom-media {
+    background: #66cc99;
+    color: #2a5c45;
+}
+
+#tray {
+    /*background-color: #2980b9;*/
+    color: #e5e9f0;
+}
